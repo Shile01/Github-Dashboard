@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react";
 
+// icons
+import { ReactComponent as ArrowLeft } from "../assets/Arrow-Left.svg";
+import { ReactComponent as ArrowRight } from "../assets/Arrow-Right.svg";
+
 function Pagination({ numberOfPages, currentPage, setCurrentPage }) {
   const [disabledPrev, setDisabledPrev] = useState(true);
   const [disabledNext, setDisabledNext] = useState(true);
@@ -30,28 +34,34 @@ function Pagination({ numberOfPages, currentPage, setCurrentPage }) {
     <>
       <section>
         <ul className="pagination">
-          <li>
-            <p
+          <li className="previous">
+            <button
               className={disabledPrev ? "disable-btn" : "page-link"}
               onClick={prevPage}
             >
-              Previous
-            </p>
+              <div className="prev-icon">
+                <ArrowLeft/>
+              </div>
+              <span class="nav-text">Previous</span>
+            </button>
           </li>
           {pageNumbers.map((pgNumber) => (
-            <li key={pgNumber}>
-              <p onClick={() => setCurrentPage(pgNumber)} className="page-link">
+            <li key={pgNumber} className="">
+              <button onClick={() => setCurrentPage(pgNumber)} className="page-number">
                 {pgNumber}
-              </p>
+              </button>
             </li>
           ))}
-          <li>
-            <p
+          <li className="next">
+            <button
               className={disabledNext ? "disable-btn" : "page-link"}
               onClick={nextPage}
             >
-              Next
-            </p>
+              <span class="nav-text">Next</span>
+              <div className="prev-icon">
+                <ArrowRight/>
+              </div>
+            </button>
           </li>
         </ul>
       </section>
