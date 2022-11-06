@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import Loading from "../components/Loading";
+import { Helmet } from "react-helmet-async";
 
 // images
 import { ReactComponent as ArrowLeft } from "../assets/Arrow-Left2.svg";
@@ -37,6 +38,14 @@ function SingleRepo() {
   console.log(id);
   return (
     <div>
+      <Helmet>
+        <title>Single Repo Details | Git Spy</title>
+        <meta
+          name="description"
+          content="Here you can view the details of the repo you clicked on"
+        />
+        <link rel="canonical" href="/singlerepo" />
+      </Helmet>
       <div className="reposMain">
         <div className="top-navigation">
           <button className="back">

@@ -5,13 +5,12 @@ import Repos from "../components/Repos";
 import Loading from "../components/Loading";
 import ErrorBack from "../components/ErrorBoundary";
 import { ErrorBoundary } from "react-error-boundary";
+import { Helmet } from "react-helmet-async";
 
 // icons used
 import { ReactComponent as Email } from "../assets/Message.svg";
 import { ReactComponent as Location } from "../assets/Location.svg";
 import { ReactComponent as User } from "../assets/User.svg";
-import { ReactComponent as Gist } from "../assets/Edit.svg";
-import { ReactComponent as Message } from "../assets/Document.svg";
 import { ReactComponent as Portfolio } from "../assets/link.svg";
 import { ReactComponent as PrivateRepo } from "../assets/FolderSimpleLock.svg";
 import { ReactComponent as PublicRepo } from "../assets/FolderSimpleMinus.svg";
@@ -73,6 +72,11 @@ function Home() {
 
   return (
     <div className="container">
+      <Helmet>
+        <title>Home | Git Spy</title>
+        <meta name="description" content="Home page of Git Spy" />
+        <link rel="canonical" href="/home" />
+      </Helmet>
       {location.pathname === "/" ? (
         <div>
           <main className="main">
