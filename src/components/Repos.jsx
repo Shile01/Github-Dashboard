@@ -17,7 +17,6 @@ function Repos({ currentRepo }) {
                   <div className="open_icon">
                     <RepoLink />
                   </div>
-                  position: relative;
                 </div>
                 <p className="about__repo">{repo.description}</p>
               </div>

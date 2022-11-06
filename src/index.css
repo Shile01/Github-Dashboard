@@ -631,6 +631,53 @@ button {
   font-style: italic;
 }
 
+/* error page */
+.error-design-wrap {
+  width: 100%;
+  height: 85vh;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  color: #002147;
+}
+.error-design-wrap h1 {
+  font-size: 124px;
+  color: #002147;
+}
+
+.error-design-wrap h2 {
+  color: #A33E3D;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  align-items: center;
+}
+
+.error-container img {
+  width: 24px;
+  height: 24px;
+}
+
+.error-design-wrapper {
+  position: relative;
+}
+
+.error-design-wrap .back {
+  margin-top: 24px;
+}
+
+.strike {
+  position: absolute;
+  background-color: #002147;
+  width: 310px;
+  height: 4px;
+  border-radius: 12px;
+  top: 80px;
+  left: -32px;
+  z-index: 1000;
+  transform: rotate(-16deg);
+}
+
 @media screen and (min-width: 1000px) {
   .header {
     flex-direction: row;
@@ -698,5 +745,9 @@ button {
   .footer {
     margin-top: 24px;
   }
+
+    .footer-repo {
+      margin-top: 168px;
+    }
 
 }

@@ -86,10 +86,8 @@ function SingleRepo() {
 
           <section className="other-stats">
             <h2 className="stats-heading">Other informations</h2>
-            <p>Fork: {repo.language}</p>
-            <p>File Size: {repo.size}kb</p>
-            <p>visibility : </p>
-            <p>watchers : </p>
+            <p>ID: {repo.id}</p>
+            <p>Network Count: {repo.network_count}</p>
             <p>open issues : {repo.open_issues}</p>
             <p>created_at : {repo.created_at}</p>
             <a
@@ -103,7 +101,7 @@ function SingleRepo() {
             </a>
           </section>
         </div>
-        <footer className="footer">
+        <footer className="footer footer-repo">
           <p>
             AltSchool Africa Second Semester Exam by Opoola Khalid Olayiwola{" "}
             <span className="student-id">ALT/SEO/022/5055</span>
